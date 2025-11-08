@@ -1,0 +1,197 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background: #f9f9f9;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+header {
+  height: 100vh;
+  background: linear-gradient(to right, #081c42, #162e63);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.logo span {
+  color: #6ec1e4;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #6ec1e4;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+}
+.header-content h1 span {
+  color: #6ec1e4;
+}
+.header-content p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+.btn {
+  display: inline-block;
+  background: #6ec1e4;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #5599c2;
+}
+
+/* Sections */
+section {
+  padding: 4rem 10%;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #081c42;
+}
+
+/* Skills */
+.skill-bars .bar {
+  background: #ddd;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.bar span {
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  font-weight: bold;
+}
+.progress {
+  height: 25px;
+  background: #6ec1e4;
+  width: 0%;
+  border-radius: 20px;
+  transition: width 1.5s ease;
+}
+
+/* Projects */
+.project-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.tag {
+  display: inline-block;
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin: 5px 5px 0 0;
+  font-size: 0.9rem;
+}
+
+/* Experience */
+.exp-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.exp-card ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+/* Contact */
+.contact-info p {
+  margin: 0.5rem 0;
+}
+.contact-info a {
+  color: #1976d2;
+  text-decoration: none;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #081c42;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background: #162e63;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  section {
+    padding: 3rem 5%;
+  }
+}
